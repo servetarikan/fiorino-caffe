@@ -215,8 +215,6 @@ export default function MenuPage() {
       <Section title="Beers">
         <Item name="Niksicko 0,33cl" price="€3.50" />
         <Item name="Niksicko 0,50cl" price="€4.00" />
-        <Item name="Corona 0,33cl" price="€5.00" />
-        <Item name="Tuborg 0.33cl" price="€3.50" />
         <Item name="Somersby 0,33cl" price="€5.00" />
       </Section>
 
