@@ -1,6 +1,20 @@
+"use client";
+
 import Script from 'next/script';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  // Pop-up'ın açık/kapalı durumunu kontrol eden state
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Sayfa yüklendikten 1 saniye (1000ms) sonra pop-up'ı açar
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#f6f1ea] text-[#2b2b2b]">
 
@@ -17,6 +31,41 @@ export default function Home() {
           gtag('config', 'AW-10930926781');
         `}
       </Script>
+
+      {/* YENİ ÜRÜN POP-UP */}
+      {showPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full overflow-hidden">
+            
+            {/* Kapatma Butonu (Çarpı) */}
+            <button 
+              onClick={() => setShowPopup(false)}
+              className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-black/50 text-white rounded-full hover:bg-black/80 transition z-10"
+            >
+              ✕
+            </button>
+            
+            {/* Ürün Fotoğrafı (public klasörüne yeni-urun.jpg adında yüklemelisiniz) */}
+            <img 
+              src="/yeni-urun.jpg" 
+              alt="Yeni Ürünümüz" 
+              className="w-full h-64 object-cover"
+            />
+            
+            {/* Alt Metin ve Yönlendirme */}
+            <div className="p-6 text-center">
+              <h3 className="text-2xl font-bold mb-2">New Flavor!</h3>
+              <p className="text-gray-600 mb-4 text-sm">Discover our newest premium dessert.</p>
+              <a 
+                href="/menu" 
+                className="inline-block px-8 py-2 bg-[#2b2b2b] text-white rounded-full hover:scale-105 transition"
+              >
+                View Menu
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* NAV */}
       <header className="flex justify-between items-center px-8 py-6">
