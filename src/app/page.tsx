@@ -4,10 +4,8 @@ import Script from 'next/script';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  // Pop-up'ın açık/kapalı durumunu kontrol eden state
   const [showPopup, setShowPopup] = useState(false);
 
-  // Sayfa yüklendikten 1 saniye (1000ms) sonra pop-up'ı açar
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
@@ -45,17 +43,19 @@ export default function Home() {
               ✕
             </button>
             
-            {/* Ürün Fotoğrafı (public klasörüne yeni-urun.jpg adında yüklemelisiniz) */}
-            <img 
-              src="/yeni-urun.jpg" 
-              alt="Yeni Ürünümüz" 
-              className="w-full h-64 object-cover"
-            />
+            {/* Ürün Fotoğrafı (Tam görünmesi için object-contain ve max-h-80 eklendi) */}
+            <div className="bg-[#f6f1ea] flex justify-center items-center">
+              <img 
+                src="/yeni-urun.jpg" 
+                alt="Seasonal Coffee" 
+                className="w-full h-auto max-h-80 object-contain"
+              />
+            </div>
             
             {/* Alt Metin ve Yönlendirme */}
             <div className="p-6 text-center">
-              <h3 className="text-2xl font-bold mb-2">New Flavor!</h3>
-              <p className="text-gray-600 mb-4 text-sm">Discover our newest premium dessert.</p>
+              <h3 className="text-2xl font-bold mb-2">New Seasonal Coffee!</h3>
+              <p className="text-gray-600 mb-4 text-sm">Discover our newest seasonal coffee.</p>
               <a 
                 href="/menu" 
                 className="inline-block px-8 py-2 bg-[#2b2b2b] text-white rounded-full hover:scale-105 transition"
