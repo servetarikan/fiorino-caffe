@@ -28,7 +28,7 @@ export default function MenuPage() {
         <Item name="Espresso Macchiato 120ml" desc="(Espresso, Foam Milk)" price="€ 2.50" />
         <Item name="Americano 220ml" desc="(Espresso, Hot Water)" price="€ 2.00" />
         <Item name="Cappuccino 280ml" desc="(Espresso, Milk)" price="€ 2.80" />
-        <Item name="Cortado 280ml" desc="(Double Espresso Milk)" price="€ 3,00" />
+        <Item name="Cortado 180ml" desc="(Double Espresso Milk)" price="€ 3,00" />
         <Item name="Flat White 280ml" desc="(Double Espresso, Milk)" price="€ 3.00" />
         <Item name="Caffe Mocha 280ml" desc="(Chocolate Syrup, Espresso, Foam Milk)" price="€3.50" />
         <Item name="White Chocolate Mocha 280ml" desc="(White Chocolate Syrup, Espresso, Foam Milk)" price="€ 3.50" />
