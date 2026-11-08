@@ -192,7 +192,16 @@ export default function MenuPage() {
         <Item name="Energy Drink 250ml" price="€ 3.00" />
         <Item name="Tonic 330ml" price="€ 3.00" />
       </Section>
-
+      
+      {/* EXTRAS */}
+      <Section title="Extras">
+        <Item name="Extra Shot Espresso" price="+€ 1.50" />
+        <Item name="Extra Syrup" price="+€ 0.50" />
+        <Item name="Extra Milk" price="+€ 0.50" />
+        <Item name="Alternative Hot Milk" desc="(Almond, Oat, Soy, Coconut)" price="+€ 1.00" />
+        <Item name="Decaf" price="+€ 0.50" />
+      </Section>
+      
       {/* SNACKS */}
       <Section title="Snacks">
         <Item name="Mozzarella Sandwich 380gr" desc="(Mozzarella, Pesto Sauce...)" price="€ 7.00" />
@@ -239,20 +248,9 @@ export default function MenuPage() {
       <Section title="Beers">
         <Item name="Niksicko 0,33cl" price="€ 3.50" />
         <Item name="Niksicko 0,50cl" price="€ 4.00" />
-        <Item name="Corona 0,33cl" price="€ 5.00" />
-        <Item name="Tuborg 0.33cl" price="€ 3.50" />
         <Item name="Somersby 0,33cl" price="€ 5.00" />
       </Section>
       
-      {/* EXTRAS */}
-      <Section title="Extras">
-        <Item name="Extra Shot Espresso" price="+€ 1.50" />
-        <Item name="Extra Syrup" price="+€ 0.50" />
-        <Item name="Extra Milk" price="+€ 0.50" />
-        <Item name="Alternative Hot Milk" desc="(Almond, Oat, Soy, Coconut)" price="+€ 1.00" />
-        <Item name="Decaf" price="+€ 0.50" />
-      </Section>
-
       {/* FOOTER */}
       <footer className="text-center mt-16 text-sm text-[#777]">
         <p className="mb-2">
