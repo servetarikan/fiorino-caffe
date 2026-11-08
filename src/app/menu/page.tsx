@@ -235,10 +235,8 @@ export default function MenuPage() {
       <Section title="Spritz">
         <Item name="Aperol Spritz 0.187L" desc="(Aperol-Prosecco)" price="€ 8.50" />
         <Item name="Limoncello Spritz 0,187L" desc="(Limoncello-Prosecco)" price="€ 8.50" />
-        <Item name="Campari Spritz 0.187L" desc="(Campari-Prosecco)" price="€ 8.50" />
         <Item name="Espresso Martini 0,187L" desc="(Vodka-Espresso-Coffee Liquer)" price="€ 8.50" />
         <Item name="Fiorino Spritz 0.187L" desc="(Vodka-Melon Liquer-Lime Juice-Sprite)" price="€ 8.50" />
-        <Item name="Lynchburg Lemonade 0.187L" desc="(Whisky-Lemon Juice-Sprite)" price="€ 8.50" />
         <Item name="Gin-Tonic 0.187L" desc="(Dry Gin-Tonic)" price="€ 7.50" />
         <Item name="Prosecco Glass 0.187L" price="€ 7.00" />
         <Item name="Prosecco Bottle 0.7L" price="€ 30.00" />
