@@ -2,6 +2,16 @@ export default function MenuPage() {
   return (
     <main className="min-h-screen bg-[#f4f4f4] text-[#333] p-6">
 
+      {/* BACK BUTTON */}
+      <div className="max-w-3xl mx-auto mb-2">
+        <a 
+          href="/" 
+          className="inline-flex items-center px-5 py-2 bg-white rounded-full shadow-md hover:scale-105 transition text-sm font-medium"
+        >
+          <span className="mr-2 text-lg leading-none">←</span> Back to Home
+        </a>
+      </div>
+
       {/* HEADER */}
       <header className="text-center mb-10">
         <img src="/logo.png" className="mx-auto w-32 mb-3" alt="logo" />
@@ -161,9 +171,28 @@ export default function MenuPage() {
       </Section>
 
       {/* FOOTER */}
-      <footer className="text-center mt-16 text-sm">
-        <p>Instagram: @caffefiorinobudva</p>
-        <p>www.fiorinocaffe.com</p>
+      <footer className="text-center mt-16 text-sm text-[#777]">
+        <p className="mb-2">
+          Instagram:{" "}
+          <a
+            href="https://instagram.com/caffefiorinobudva"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#333] hover:text-orange-500 font-medium transition"
+          >
+            @caffefiorinobudva
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://www.fiorinocaffe.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#333] hover:text-orange-500 font-medium transition"
+          >
+            www.fiorinocaffe.com
+          </a>
+        </p>
       </footer>
 
     </main>
