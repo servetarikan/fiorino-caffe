@@ -213,9 +213,9 @@ export default function MenuPage() {
 
       {/* BEERS */}
       <Section title="Beers">
-        <Item name="Niksicko 0,33cl" price="€3.50" />
-        <Item name="Niksicko 0,50cl" price="€4.00" />
-        <Item name="Somersby 0,33cl" price="€5.00" />
+        <Item name="Niksicko 0,33ml" price="€3.50" />
+        <Item name="Niksicko 0,50ml" price="€4.00" />
+        <Item name="Somersby 0,33ml" price="€5.00" />
       </Section>
 
       {/* FOOTER */}
