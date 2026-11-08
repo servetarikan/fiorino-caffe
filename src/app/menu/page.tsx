@@ -1,6 +1,56 @@
+"use client";
+
+import { useState, useEffect } from 'react';
+
 export default function MenuPage() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#f4f4f4] text-[#333] p-6">
+
+      {/* YENİ ÜRÜN POP-UP */}
+      {showPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full overflow-hidden">
+            
+            {/* Kapatma Butonu (Çarpı) */}
+            <button 
+              onClick={() => setShowPopup(false)}
+              className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-black/50 text-white rounded-full hover:bg-black/80 transition z-10"
+            >
+              ✕
+            </button>
+            
+            {/* Ürün Fotoğrafı */}
+            <div className="bg-[#f6f1ea] flex justify-center items-center">
+              <img 
+                src="/yeni-urun.jpg" 
+                alt="Seasonal Coffee" 
+                className="w-full h-auto max-h-80 object-contain"
+              />
+            </div>
+            
+            {/* Alt Metin ve Yönlendirme */}
+            <div className="p-6 text-center">
+              <h3 className="text-2xl font-bold mb-2">New Seasonal Coffee!</h3>
+              <p className="text-gray-600 mb-4 text-sm">Discover our newest seasonal coffee.</p>
+              <button 
+                onClick={() => setShowPopup(false)}
+                className="inline-block px-8 py-2 bg-[#2b2b2b] text-white rounded-full hover:scale-105 transition"
+              >
+                Continue to Menu
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* BACK BUTTON */}
       <div className="max-w-3xl mx-auto mb-2">
@@ -28,7 +78,7 @@ export default function MenuPage() {
         <Item name="Espresso Macchiato 120ml" desc="(Espresso, Foam Milk)" price="€ 2.50" />
         <Item name="Americano 220ml" desc="(Espresso, Hot Water)" price="€ 2.00" />
         <Item name="Cappuccino 280ml" desc="(Espresso, Milk)" price="€ 2.80" />
-        <Item name="Cortado 180ml" desc="(Double Espresso Milk)" price="€ 3,00" />
+        <Item name="Cortado 280ml" desc="(Double Espresso Milk)" price="€ 3,00" />
         <Item name="Flat White 280ml" desc="(Double Espresso, Milk)" price="€ 3.00" />
         <Item name="Caffe Mocha 280ml" desc="(Chocolate Syrup, Espresso, Foam Milk)" price="€3.50" />
         <Item name="White Chocolate Mocha 280ml" desc="(White Chocolate Syrup, Espresso, Foam Milk)" price="€ 3.50" />
