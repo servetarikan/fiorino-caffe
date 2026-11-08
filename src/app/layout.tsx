@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Fiorino Caffè",
   description: "Authentic Italian Coffee Experience",
+  other: {
+    "facebook-domain-verification": "qb8wbu8knaicjxfnsobjkzxdjw75hg",
+  },
 };
 
 export default function RootLayout({
